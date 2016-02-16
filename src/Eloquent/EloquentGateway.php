@@ -107,6 +107,14 @@ class EloquentGateway implements Gateway
     }
 
     /**
+     * @throws RepositoryException
+     */
+    public function resetRepository()
+    {
+        $this->makeRepository();
+    }
+
+    /**
      * Wrapper result data
      *
      * @param mixed $result
@@ -135,6 +143,13 @@ class EloquentGateway implements Gateway
     {
         // perform any sort of validation first
         return $this->parserResult($this->repository->all());
+    }
+
+    public function with($relations)
+    {
+        // perform any sort of validation first
+        $this->repository->with($relations);
+        return $this;
     }
 
     public function create(array $data)
