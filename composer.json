@@ -1,0 +1,21 @@
+{
+  "name": "eilander/gateway",
+  "description": "Laravel 5 gateway generator package.",
+  "keywords": ["laravel", "gateway", "fractal" , "laravel5"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mark Eilander",
+      "email": "mark.eilander@outlook.com"
+    }
+  ],
+  "require": {
+      "php": ">=5.5.9",
+      "laravel/framework": "5.1.*|5.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Eilander\\Gateway\\": "src/"
+    }
+  }
+}
