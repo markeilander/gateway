@@ -122,7 +122,7 @@ class EloquentGateway implements Gateway
      */
     protected function parserResult($result)
     {
-        if (!$this->skipPresenter() && $this->presenter instanceof Presenter ) {
+        if (!$this->skipPresenter && $this->presenter instanceof Presenter ) {
             if( $result instanceof Collection || $result instanceof LengthAwarePaginator){
                 $result->each(function($model){
                     if( $model instanceof Presentable ){
