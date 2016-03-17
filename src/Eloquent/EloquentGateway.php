@@ -152,12 +152,12 @@ class EloquentGateway implements Gateway
         return $this;
     }
 
-    public function create(array $data)
+    public function create(array $data, $validation = '')
     {
         // some validation
         if ( $this->validator instanceof Validator ) {
             // some validation
-            if ($this->validator->fails($data)) {
+            if ($this->validator->fails($data, $validation)) {
                 return $this->validator;
             }
             // perform any sort of validation first
@@ -166,12 +166,12 @@ class EloquentGateway implements Gateway
         return null;
     }
 
-    public function update(array $data, $id)
+    public function update(array $data, $id, $validation = '')
     {
         // some validation
         if ( $this->validator instanceof Validator ) {
             // some validation
-            if ($this->validator->fails($data)) {
+            if ($this->validator->fails($data, $validation)) {
                 return $this->validator;
             }
             // perform any sort of validation first
