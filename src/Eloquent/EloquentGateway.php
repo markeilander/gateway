@@ -156,8 +156,9 @@ class EloquentGateway implements Gateway
     {
         // some validation
         if ( $this->validator instanceof Validator ) {
+            $rules = [];
             // some validation
-            if ($this->validator->fails($data, $validation)) {
+            if ($this->validator->fails($data, $validation, $rules)) {
                 return $this->validator;
             }
             // perform any sort of validation first
@@ -170,8 +171,12 @@ class EloquentGateway implements Gateway
     {
         // some validation
         if ( $this->validator instanceof Validator ) {
+            $rules = [];
+            if (method_exists($this->validator, 'update')) {
+                $rules = $this->validator->update($id);
+            }
             // some validation
-            if ($this->validator->fails($data, $validation)) {
+            if ($this->validator->fails($data, $validation, $rules)) {
                 return $this->validator;
             }
             // perform any sort of validation first
