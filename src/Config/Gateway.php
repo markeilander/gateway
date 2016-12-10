@@ -17,10 +17,10 @@ return [
     DataArraySerializer
     JsonApiSerializer
     */
-    'fractal'=>[
-        'params'=>[
-            'include'=>'include'
+    'fractal'=> [
+        'params'=> [
+            'include'=> 'include',
         ],
-        'serializer' => League\Fractal\Serializer\DataArraySerializer::class
+        'serializer' => League\Fractal\Serializer\DataArraySerializer::class,
     ],
 ];
