@@ -5,8 +5,7 @@ namespace Eilander\Gateway\Providers;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class GatewayServiceProvider
- * @package Eilander\Gateway\Providers
+ * Class GatewayServiceProvider.
  */
 class GatewayServiceProvider extends ServiceProvider
 {
@@ -18,19 +17,18 @@ class GatewayServiceProvider extends ServiceProvider
     protected $defer = false;
 
     /**
-     *
      * @return void
      */
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../Config/Gateway.php' => config_path('gateway.php')
+            __DIR__.'/../Config/Gateway.php' => config_path('gateway.php'),
         ]);
         $this->mergeConfigFrom(
-            __DIR__ . '/../Config/Gateway.php', 'gateway'
+            __DIR__.'/../Config/Gateway.php', 'gateway'
         );
 
-        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'gateway');
+        $this->loadTranslationsFrom(__DIR__.'/../lang', 'gateway');
     }
 
     /**
@@ -40,6 +38,5 @@ class GatewayServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
     }
 }
