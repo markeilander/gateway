@@ -2,8 +2,8 @@
 
 namespace Eilander\Gateway\Upload;
 
-use Eilander\Gateway\Contracts\Upload as Gateway;
 use Eilander\Gateway\Contracts\Presenter;
+use Eilander\Gateway\Contracts\Upload as Gateway;
 use Eilander\Gateway\GatewayException;
 use Eilander\Repository\Contracts\Upload as Repository;
 use Eilander\Validator\Contracts\ValidatorInterface as Validator;
