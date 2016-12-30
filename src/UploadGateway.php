@@ -5,7 +5,7 @@ namespace Eilander\Gateway\Eloquent;
 use Eilander\Gateway\Contracts\Eloquent as Gateway;
 use Eilander\Gateway\Contracts\Presenter;
 use Eilander\Gateway\GatewayException;
-use Eilander\Repository\Contracts\Repository as Repository;
+use Eilander\Repository\Contracts\Upload as Repository;
 use Eilander\Validator\Contracts\ValidatorInterface as Validator;
 use Illuminate\Container\Container as Application;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
