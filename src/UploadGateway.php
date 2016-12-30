@@ -11,7 +11,7 @@ use Illuminate\Container\Container as Application;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
-class EloquentGateway implements Gateway
+class UploadGateway implements Gateway
 {
     /**
      * @var Application
@@ -149,10 +149,10 @@ class EloquentGateway implements Gateway
     }
 
     /**
-     * Upload file
+     * Upload file.
      *
-     * @param string $file file to upload
-     * @param array $data
+     * @param string $file       file to upload
+     * @param array  $data
      * @param string $validation reference to validation rules
      *
      * @return mixed
