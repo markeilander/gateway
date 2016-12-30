@@ -3,15 +3,15 @@
 namespace Eilander\Gateway\Contracts;
 
 /**
- * Interface Uplods
+ * Interface Uplods.
  */
 interface Upload
 {
     /**
-     * Upload file
+     * Upload file.
      *
      * @param string $file file to upload
-     * @param array $data
+     * @param array  $data
      *
      * @return mixed
      */
