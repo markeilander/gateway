@@ -1,6 +1,6 @@
 <?php
 
-namespace Eilander\Gateway\Eloquent;
+namespace Eilander\Gateway\Upload;
 
 use Eilander\Gateway\Contracts\Eloquent as Gateway;
 use Eilander\Gateway\Contracts\Presenter;
