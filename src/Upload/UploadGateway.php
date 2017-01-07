@@ -129,22 +129,6 @@ class UploadGateway implements Gateway
      */
     protected function parserResult($result)
     {
-        if (!$this->skipPresenter && $this->presenter instanceof Presenter) {
-            if ($result instanceof Collection || $result instanceof LengthAwarePaginator) {
-                $result->each(function ($model) {
-                    if ($model instanceof Presentable) {
-                        $model->setPresenter($this->presenter);
-                    }
-
-                    return $model;
-                });
-            } elseif ($result instanceof Presentable) {
-                $result = $result->setPresenter($this->presenter);
-            }
-
-            return $this->presenter->present($result, $this->repository->with);
-        }
-
         return $result;
     }
 
