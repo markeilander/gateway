@@ -8,8 +8,6 @@ use Eilander\Gateway\GatewayException;
 use Eilander\Repository\Contracts\Upload as Repository;
 use Eilander\Validator\Contracts\ValidatorInterface as Validator;
 use Illuminate\Container\Container as Application;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Collection;
 
 class UploadGateway implements Gateway
 {
