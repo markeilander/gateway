@@ -145,7 +145,7 @@ class UploadGateway implements Gateway
         if ($this->validator instanceof Validator) {
             $rules = [];
             // some validation
-            if ($this->validator->fails($data, $validation, $rules)) {
+            if ($this->validator->fails($file, $validation, $rules)) {
                 return $this->validator;
             }
             // perform any sort of validation first
